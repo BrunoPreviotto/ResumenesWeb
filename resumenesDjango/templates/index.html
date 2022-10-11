@@ -1,0 +1,75 @@
+{% extends 'barraNavPier.html' %}
+{% load static %}
+
+
+
+
+
+
+{% block body %}
+
+
+
+
+
+
+
+<div class="container-fluid text-center">
+
+    <h1>Promociones y descuentos</h1>
+    <div class="container-fluid row justify-content-center">
+        {% for prod in productos %}
+        
+        <div class="divPromos col-4 m-1 mt-2">
+            <h2>{{ prod.promocion_descuento.id_nombre_descuento.nombre }}</h2>
+            <img class="img-fluid" src="{% static 'img/promo.jpg' %}" alt="">
+            <p>{{ prod.promocion_descuento.nombre }}</p>
+            <p>{{ prod.producto }}</p>
+            <p>{{ prod.obtenerDescuento }} $</p>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+
+
+
+
+
+{% endblock body %}
+
+{% if prod.promocion_descuento.id_nombre_descuento.id != 4 and prod.es_stock == '1' %}
+        
+        <div class="divPromos col-4 m-1 mt-2">
+            <h2>{{ prod.promocion_descuento.id_nombre_descuento.nombre }}</h2>
+            <img class="img-fluid" src="{% static 'img/promo.jpg' %}" alt="">
+            <p>{{ prod.promocion_descuento.nombre }}</p>
+            <p>{{ prod.producto }}</p>
+            <p>{{ prod.obtenerDescuento }} $</p>
+        </div>
+
+        {% endif %}

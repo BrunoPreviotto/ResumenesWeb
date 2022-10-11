@@ -1,0 +1,11 @@
+{% extends 'barraNavPier.html' %}
+
+
+
+
+{% block body %}
+    {% for c in categorias %}
+        <p>{{c.categoria}}</p>
+    {% endfor %}
+{% endblock body %}
+    

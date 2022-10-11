@@ -1,0 +1,70 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+.imagenInicio{
+    width: 200px;
+    height: 200px;
+    
+}
+
+#opcionesBarra{
+   
+    width: 0%;
+    height: 50px;
+    background-color: rgb(240, 207, 207);
+    border-bottom : 2px solid rgb(229, 128, 150);
+   
+}
+
+li{
+    list-style: none;
+    display: inline;
+    margin: 10px;
+    color: black;
+}
+
+
+#imagenNav{
+    width: 100%;
+}
+
+.listaCategorias{
+    text-transform: capitalize;
+}
+
+.barraNavegacion{
+    background-color:  rgb(225, 108, 136);
+    border : 2px solid rgb(229, 128, 150);
+}
+    
+
+.subcategoria:link{
+    text-decoration: none;
+}
+
+.subcategoria:hover{
+    color: black;
+}
+
+.subcategoria{
+    text-transform: capitalize;
+    color: gray;
+}
+
+.divPromos{
+    box-shadow: 5px 5px 5px gray;
+    background-color: antiquewhite;
+    border: 1px solid rgb(225, 108, 136);
+}
+
+.lateralBarraSubcategoria{
+    background-color:  rgb(225, 108, 136);
+    
+}
+
+
