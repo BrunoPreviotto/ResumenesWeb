@@ -1,0 +1,14 @@
+{% extends 'barraNavPier.html' %}
+{% block body %}
+
+    <form action="post">
+        {% csrf_token %}
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" name="username">
+        <label id="contraseña" for="password">Contraseña:</label>
+        <input type="text" name="password">
+        <button type="submit">Ingresar</button>
+        <a href="">Olvide mi contraseña</a>
+    </form>
+
+{% endblock body %}

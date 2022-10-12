@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import CategoriasView, obtenerCategoriasView, BarraView, obtenerSubCategoriasView, obtenerProductosView, obtenerPromoDescuentoView
-
+from .views import CategoriasView,  BarraView
+from .apis import obtenerCategoriasView, obtenerProductosView, obtenerPromoDescuentoView, obtenerSubCategoriasView
 urlpatterns = [
     path('barra/', BarraView.as_view(), name = 'barra'),
     path('categoriamostrar/', CategoriasView.as_view(), name = 'categoriasmostrar'),
